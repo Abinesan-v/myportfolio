@@ -1,0 +1,272 @@
+/* google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+/* removing common browser styles */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+/* navbar section starts */
+.navbar .navbar-brand{
+    font-size: 40px;
+}   
+.navbar .nav-link{
+    text-transform: capitalize;
+    margin-right: 15px;
+    font-size: 14px;
+    color: #fff !important;
+ }
+.navbar .nav-link::after{
+    content: '';
+    display: block;
+    height: 2px;
+    border-radius: 2px;
+    background-color: rgba(255,255,255,.55);
+    transform: scale(0);
+    transition:  0.4s;
+ }
+.navbar .nav-link:hover::after{
+    transform: scale(1);
+}
+.navbar .btn{
+    border-radius: 20px;
+    font-size: 15px;
+    padding: 5px 10px;
+}
+.navbar .navbar-toggler {
+    border: none;
+}
+button:focus:not(:focus-visible) {
+    outline: none;
+}
+.navbar-toggler:focus,.navbar-toggler:active,.navbar-toggler-icon:focus{
+    outline: none;
+    box-shadow: none;
+    border: 0;
+}
+.navbar-toggler .toggler-icon{
+    display: block;
+    width:30px;
+    height:3px;
+    background-color: #fff;
+    border-radius: inherit;
+    transition: all 0.3s;
+}
+.navbar-toggler .middle-bar{
+    margin: 5px 0;
+}
+.navbar-toggler .top-bar{
+    transform: rotate(45deg);
+    transform-origin: 10% 10%;
+}
+.navbar-toggler .middle-bar{
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+.navbar-toggler .bottom-bar{
+    transform: rotate(-45deg);
+    transform-origin: 10% 10%;
+}
+
+.navbar-toggler.collapsed .top-bar{
+    transform: rotate(0);
+}
+.navbar-toggler.collapsed .middle-bar{
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+.navbar-toggler.collapsed .bottom-bar{
+    transform: rotate(0);
+}
+.navbar-toggler.collapsed .toggler-icon{
+    background-color: #fff;
+}
+.bg-dark{
+    background-color: rgba(0, 0, 0, 0.5) !important;
+}
+/* navbar section ends */
+/* modal-form section starts */
+.modal-dialog{
+    max-width: 400px;
+    margin-right: 50px;
+    margin-top: 50px;
+}
+.form-control {
+    width: 90%;
+    padding: 10px;
+    margin: 0 14px 20px ;
+    font-size: 18px;
+}
+.modal-content .btn-close{
+    margin-left: 350px;
+}
+.modal-content input[type=submit]{
+    margin-left: 20px;
+}
+.modal-content textarea{
+    resize:none;
+}
+.modal-content input[placeholder],.modal-content textarea[placeholder],.modal-content input[value]{
+    font-family: 'font awesome 5 free';
+    font-weight:600;
+}
+/* modal-form section ends */
+/* home section start */
+.bg-img{
+    background: url('../img/bg-img.jpg') no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 500px;
+}
+/* home section ends */
+/* progress-bar section starts */
+.progress-section{
+   padding-top: 5% ; 
+}
+.progress-content{
+    margin-top: 40px;
+}
+.progress{
+    height: 5px;
+    margin-bottom: 25px;
+}
+.bar1,.bar2,.bar3,.bar4,.bar5,.bar6{
+    background-color: #f20734;
+    width: 0;
+}
+.progress-bar-scroll1{
+    width: 90%;
+}
+.progress-bar-scroll2{
+    width: 80%;
+}
+.progress-bar-scroll3{
+    width: 65%;
+}
+.progress-bar-scroll4{
+    width: 70%;
+}
+.progress-bar-scroll5{
+    width: 60%;
+}
+.progress-bar-scroll6{
+    width: 65%;
+}
+.progress-content p{
+    color: #aca2a2;
+    position: relative;
+    top:18px;
+}
+.progress-section .progress-section-content p{
+    text-align: justify;
+    text-indent: 50px;  
+    padding-top:50px;
+    padding-left: 10px;
+}
+
+/* progress-bar section ends */
+
+/* slider section starts */
+.slider .slider-row{
+    overflow-y: hidden;
+}
+.slider-row::-webkit-scrollbar{
+    visibility: hidden;
+}
+.slider .slider-row .col-md-4 {
+    width: 34.3%;
+}
+.slider .slider-row img{
+    width: 300px;   
+    height: 200px;
+    background-color: #aca2a2;
+    position: relative;
+    animation: slider 10s ease-in-out 2s infinite;
+}
+@keyframes slider {
+    0%{left:0;}
+    20%{left:-960px}
+    30%{left:-960px}
+    40%{left:-960px}
+    50%{left:-960px}
+    60%{left:0;}
+    70%{left:0;}
+    80%{left:0;}
+    100%{left:0;}
+}
+/* slider section ends */
+
+/* media queries start */
+@media screen and (max-width:992px){
+    .progress-section{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+@media screen and (max-width:768px) {
+    /* navbar section responsive */
+    .navbar .container-md{
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    .navbar .nav-link{
+       text-align: center;
+       margin-left: auto;
+       margin-right: auto;
+    }
+    .navbar .btn{
+       display: block;
+       text-align: center;
+       margin: 10px auto;
+     }
+    .navbar .nav-link::after{
+        display: none;
+    }
+    .navbar .nav-link:hover{
+        color: rgb(180, 175, 175) !important;
+    }
+    /* modal section responsive */
+    .modal-dialog {
+        max-width: 400px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    /* progress section responsive */
+    .progress-section{
+        margin: 15px 30px;
+    }
+    .progress-content{
+        margin-top: 25px;
+    }
+    .progress-section .progress-section-content p{
+        padding-top: 10px;
+        padding-left: 0;
+    }
+}
+@media screen and (max-width:576px) {
+    .progress-section{
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+}
+@media screen and (max-width:500px) {
+    /* navbar section responsive */
+    .navbar .container-md{
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media screen and (max-width:400px) {
+    /* modal section responsive */
+    .modal-dialog {
+        max-width: 300px;
+        
+    }
+    .modal-content .btn-close{
+        margin-left: 250px;
+    }
+}
+
+
